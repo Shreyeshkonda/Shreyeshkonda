@@ -1,0 +1,31 @@
+Aim :
+To write a C program To reverse the elements Of The Array
+Algorithm :
+1. Start
+2. Read size of array as n
+3. Read the elements Of Array using loop iterates from 0 to n-1
+4. Loop iterates from I = 0 to n/2
+4.1. Swap arr[I] and arr[n-i-1] to reverse
+5. Print The Elements Of the Array After Reversing
+6. Stop
+Program :
+#include<stdio.h>
+void main()
+{
+int n,i;
+printf("Enter the length of the array\n");
+scanf("%d",&n);
+int a[n];
+printf("Enter the elements of array\n");
+for(i=0; i<n; i++)
+scanf("%d",&a[i]);
+for(int i = 0; i < n/2; i++)
+{
+int temp = a[i];
+a[i] = a[n-1 -i];
+a[n-i-1] = temp;
+}
+printf("Array of after Reverse\n");
+for(i = 0;i < n; i++)
+printf("%d\n",a[i]);
+}
