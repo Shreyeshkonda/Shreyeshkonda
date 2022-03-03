@@ -39,3 +39,6 @@ i) Quick Sort ii) Heap sort
 Lab 12:
 Write a C program for implementing pattern matching algorithms
 I. Knuth-Morris-Pratt ii) Brute Force
+1.1. Insertion Of Element Int An Array
+Aim :
+Write a program to inserting an element into a specific position of an array
