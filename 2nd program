@@ -1,0 +1,41 @@
+Aim :
+To write a C program to Delete an element of an Array
+Algorithm :
+1. Start
+2. Read length of array as n
+3. Read All Elements Of array using loop iterates from 0 to n - 1
+4. Read the position of deleting element
+5.
+6.1 If deleting position is greater the n-1
+6.1.1. print deletion is not possible
+6.2 else
+6.2.1. Left Shift the elements from index deleting position
+6. Print the elements after deletion
+7. Stop
+Program :
+#include<stdio.h>
+#include<stdlib.h>
+void main()
+{
+int n,dp;
+int *arr;
+printf("Enter the length of the array: ");
+scanf("%d",&n);
+arr = (int*) malloc (n* sizeof(int));
+printf("Enter the elements of the array\n");
+for(int i = 0; i < n; i++)
+scanf("%d",&arr[i]);
+printf("The elements of the array are \n");
+for(int i = 0; i < n; i++)
+printf("%d\n",arr[i]);
+6
+printf("Enter the position of element want to delete\n");
+scanf ("%d",&dp);
+for(int i = dp; i < n-1; i++)
+arr[i] = arr[i+1];
+n--;
+arr = (int*) realloc(arr, n*sizeof(int));
+printf("After deletion The elements of the array are \n");
+for(int i = 0; i < n; i++)
+printf("%d\n",arr[i]);
+}
